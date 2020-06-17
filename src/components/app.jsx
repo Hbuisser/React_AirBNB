@@ -2,10 +2,15 @@ import React, { Component } from 'react';
 import FlatList from './flat_list.jsx';
 import SimpleMap from './map.jsx';
 import GoogleMapReact from 'google-map-react';
+import flats from '../data/flat.js';
+
 
 class App extends Component {
   constructor(props) {
     super(props);
+    this.state = {
+      flats: flats
+    }
   }
 
   // center() {
@@ -18,9 +23,7 @@ class App extends Component {
   render() {
     return (
       <div>
-        <div className="flat-list">
-          <FlatList/>
-        </div>
+        <FlatList flatlist={this.state.flats}/>
         <div className="map-container">
             <SimpleMap/>
         </div>

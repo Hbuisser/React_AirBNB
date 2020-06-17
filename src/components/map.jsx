@@ -1,23 +1,3 @@
-// import React, { Component } from 'react';
-// import flats from '../data/flat.js';
-
-// class Mapp extends Component {
-//   constructor(props) {
-//     super(props)
-//   }
-
-//   render() {
-//     return(
-//       <div>
-//           Hello
-//       </div>
-//     )
-//   }
-// }
-
-// export default Mapp;
-
-
 import React, { Component } from 'react';
 import GoogleMapReact from 'google-map-react';
 import API_KEY from '../../env.jsx';
@@ -54,3 +34,22 @@ class SimpleMap extends Component {
 }
 
 export default SimpleMap;
+
+// import React, { Component } from 'react';
+// import flats from '../data/flat.js';
+
+// class Mapp extends Component {
+//   constructor(props) {
+//     super(props)
+//   }
+
+//   render() {
+//     return(
+//       <div>
+//           Hello
+//       </div>
+//     )
+//   }
+// }
+
+// export default Mapp;

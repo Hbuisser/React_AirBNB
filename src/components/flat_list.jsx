@@ -9,8 +9,12 @@ class FlatList extends Component {
 
   render() {
     return(
-      <div>
-        <Flat/>
+      <div className="flat-list">
+        {
+          this.props.flatlist.map((flat) => {
+            return <Flat flat={flat} url={flat.imageUrl} key={flat.imageUrl}/>
+          })
+        }
       </div>
     )
   }
