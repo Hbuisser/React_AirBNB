@@ -9,7 +9,8 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      flats: flats
+      flats: flats,
+      selectedFlat: flats[0]
     }
   }
 
@@ -20,12 +21,18 @@ class App extends Component {
   //   };
   // }
 
+  selectFlat = (index) => {
+    this.setState({
+      selectedFlat: flats[index]
+    })
+  }
+
   render() {
     return (
       <div>
-        <FlatList flatlist={this.state.flats}/>
+        <FlatList flatlist={this.state.flats} selectedFlatFct={this.selectFlat}/>
         <div className="map-container">
-            <SimpleMap/>
+            <SimpleMap marker={this.state.selectedFlat}/>
         </div>
       </div>
     )

@@ -11,8 +11,11 @@ class FlatList extends Component {
     return(
       <div className="flat-list">
         {
-          this.props.flatlist.map((flat) => {
-            return <Flat flat={flat} key={flat.imageUrl}/>
+          this.props.flatlist.map((flat, i) => {
+            return <Flat index={i} flat={flat} key={flat.imageUrl} selectedFlat={this.props.selectedFlatFct}/>
+            console.log("The current iteration is: " + i);
+            console.log("The current element is: " + flat.name);
+            console.log("\n");
           })
         }
       </div>
